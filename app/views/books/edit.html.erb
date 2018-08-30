@@ -1,0 +1,24 @@
+<h1>Books#edit</h1>
+
+<%= form_for(@book) do |f| %>
+
+<div>
+<%=f.label :name %>
+<%=f.text_field :name %>
+</div>
+
+<div>
+<%=f.label :description %>
+<%=f.text_field :description %>
+</div>
+
+<%=f.submit %>
+<% end %>
+
+<p>
+ <%= link_to "Create Book",new_book_path %>	
+</p>
+
+<p>
+<%= link_to "Back", books_path %>
+</p>	

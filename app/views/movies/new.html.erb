@@ -1,0 +1,26 @@
+<h1> Creating New Movie </h1>
+
+<%=form_for(@movie)do|f| %>
+
+<div>
+    <%=f.label :name %>
+    <%=f.text_field :name %>
+</div>
+
+<div>
+    <%= f.label :director %>
+    <%= f.text_field :director %>
+</div>
+
+<div>
+    <%= f.label :hero %>
+    <%= f.text_field :hero %>
+</div>
+
+
+
+<div>
+<%= f.submit "create new movie" %>
+</div>
+
+<% end %>

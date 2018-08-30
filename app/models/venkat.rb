@@ -1,0 +1,2 @@
+class Venkat < ApplicationRecord
+end

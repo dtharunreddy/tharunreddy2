@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @venkat.name %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @venkat.city %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @venkat.country %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @venkat.email %>
+</p>
+
+<%= link_to 'Edit', edit_venkat_path(@venkat) %> |
+<%= link_to 'Back', venkats_path %>

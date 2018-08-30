@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Movies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Director</th>
+      <th>Hero</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @movies.each do |movie| %>
+      <tr>
+        <td><%= movie.name %></td>
+        <td><%= movie.director %></td>
+        <td><%= movie.hero %></td>
+        <td><%= link_to 'Show', movie %></td>
+        <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
+        <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<h1> Creating New Movie </h1>
+
+<%=form_for(@movie)do|f| %>
+
+<div>
+    <%=f.label :name %>
+    <%=f.text_field :name %>
+</div>
+
+<div>
+    <%= f.label :director %>
+    <%= f.text_field :director %>
+</div>
+
+<div>
+    <%= f.label :hero %>
+    <%= f.text_field :hero %>
+</div>
+
+
+
+<div>
+<%= f.submit "create new movie" %>
+</div>
+
+<% end %>
+

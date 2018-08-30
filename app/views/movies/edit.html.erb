@@ -1,0 +1,33 @@
+
+
+
+<h1>Movies#edit</h1>
+
+<%= form_for(@movie) do |f| %>
+
+<div>
+<%=f.label :name %>
+<%=f.text_field :name %>
+</div>
+
+<div>
+<%=f.label :director %>
+<%=f.text_field :director %>
+</div>
+
+<div>
+<%=f.label :hero %>
+<%=f.text_field :hero %>
+</div>
+
+
+<%=f.submit %>
+<% end %>
+
+<p>
+ <%= link_to "Create movie",new_movie_path %>	
+</p>
+
+<p>
+<%= link_to "Back", movies_path %>
+</p>	

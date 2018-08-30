@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Venkats</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>City</th>
+      <th>Country</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @venkats.each do |venkat| %>
+      <tr>
+        <td><%= venkat.name %></td>
+        <td><%= venkat.city %></td>
+        <td><%= venkat.country %></td>
+        <td><%= venkat.email %></td>
+        <td><%= link_to 'Show', venkat %></td>
+        <td><%= link_to 'Edit', edit_venkat_path(venkat) %></td>
+        <td><%= link_to 'Destroy', venkat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Venkat', new_venkat_path %>
