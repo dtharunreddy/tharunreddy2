@@ -63,3 +63,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'execjs'
 gem 'therubyracer'
+
+
+gem 'devise'
+
+# gem 'pg'
+
+gem 'simple_form'

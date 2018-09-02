@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+ 
+  # get 'welcome/index'
+  get 'welcome/index'
+  root 'welcome#index'
   resources :laptops do 
     member do
       put 'update_first_record'
@@ -6,6 +10,7 @@ Rails.application.routes.draw do
 
     collection do
       get 'first_30_records'
+      get 'ajax_demo'
     end  
   end  
 
@@ -55,5 +60,6 @@ Rails.application.routes.draw do
   resources :products
   resources :categories
   resources :movies
+   resources :keywords
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

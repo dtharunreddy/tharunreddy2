@@ -70,7 +70,15 @@ class LaptopsController < ApplicationController
   def first_30_records
     @laptops = Laptop.where(id: 0..30)
     render json: @laptops
-  end  
+  end 
+
+  def ajax_demo
+    (0..2).each do |i|
+    Laptop.create(name: "name#{i}", model:"model#{i}", city: "city#{i}")
+    end
+  end
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_laptop

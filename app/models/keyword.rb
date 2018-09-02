@@ -1,0 +1,3 @@
+class Keyword < ApplicationRecord
+
+end	

@@ -26,6 +26,38 @@
   </tbody>
 </table>
 
+<!-- <br> -->
+
+
+
+
+<br>
+  <%= button_tag "create three laptop records",id:"create_three_records" %>
 <br>
 
+         
+<div id= "ajax_result">
+
+</div>
+
+
+
+<script>
+$("#create_three_records").click(function(){
+  $.ajax({
+    type: "GET",
+    url: "laptops/ajax_demo",
+    data: "",
+    success: function(data) {
+    $("#ajax_result").text("created 3 records in laptops table");
+    },
+    error: function(data) {
+    alert("error")
+    }
+  });
+});
+</script>
+
 <%= link_to 'New Laptop', new_laptop_path %>
+
+
